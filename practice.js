@@ -38,15 +38,15 @@ callFriendFn("435-215-9248");
 
 //Next Problem
 
-
-
 /*
   Write a function called makeCounter that makes the following code work properly.
 */
 
-var makeCounter = function(){
-  var num = 1; 
-  return num++
+var makeCounter = function(){ 
+  var count = 0; 
+  return function(){
+    return count++;
+  }
 }
 
   //Code Here
@@ -56,8 +56,7 @@ var makeCounter = function(){
   count() // 3
   count() // 4
 
-
-
+//Set a new var equal to makeCounter() to create a new counter
 //Next Problem
 
 
@@ -69,6 +68,10 @@ var makeCounter = function(){
   After the function has been called N number of times, console.log('STAHHP');
 */
 
-
+var fn1 = function(fn){
+  return function(){
+    return "Closed"; 
+  }
+}
 
 
